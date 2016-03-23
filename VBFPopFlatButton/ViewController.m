@@ -39,12 +39,14 @@
     [self.view addSubview:self.flatRoundedButton];
     
     
-    self.flatPlainButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(200, 100, 30, 30)
+    self.flatPlainButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(200, 100, 50, 50)
                                                        buttonType:buttonAddType
                                                       buttonStyle:buttonPlainStyle
                                             animateToInitialState:NO];
     self.flatPlainButton.lineThickness = 2;
     self.flatPlainButton.tintColor = [UIColor whiteColor];
+  self.flatPlainButton.contentEdgeInsets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0);
+  self.flatPlainButton.backgroundColor = [UIColor redColor];
     [self.flatPlainButton addTarget:self
                              action:@selector(flatPlainButtonPressed)
                    forControlEvents:UIControlEventTouchUpInside];
